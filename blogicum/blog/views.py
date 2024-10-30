@@ -4,7 +4,7 @@ from django.http import Http404
 
 posts = [
     {
-        'id': 10,
+        'id': 0,
         'location': 'Остров отчаянья',
         'date': '30 сентября 1659 года',
         'category': 'travel',
