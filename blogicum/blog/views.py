@@ -47,6 +47,7 @@ posts = [
 
 posts_dict = {post['id']: post for post in posts}
 
+
 def index(request):
     template_name = 'blog/index.html'
     contex = {'posts': posts}
@@ -57,15 +58,13 @@ def post_detail(request, id):
     template_name = 'blog/detail.html'
     if id not in posts_dict:
         raise Http404("Пост с таким ключом не найден")
-    
     # Получение поста из словаря
     post = posts_dict[id]
-    
     context = {'post': post}
     return render(request, template_name, context)
 
 
-def category_posts(request, category_slug):    
+def category_posts(request, category_slug):
     template_name = 'blog/category.html'
     contex = {'category': category_slug}
     return render(request, template_name, contex)

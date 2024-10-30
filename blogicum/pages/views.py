@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 
-def about(request):    
+def about(request):
     template_name = 'pages/about.html'
     return render(request, template_name)
 
 
-def rules(request):    
+def rules(request):
     template_name = 'pages/rules.html'
     return render(request, template_name)
